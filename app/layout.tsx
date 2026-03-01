@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import TanStackProvider from "../components/TanStackProvider/TanStackProvider";
+import { Roboto } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "NoteHub — Твій розумний записник",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "NoteHub — Твій розумний записник",
     description:
       "Зберігайте свої ідеї безпечно та доступно з будь-якого пристрою.",
-    url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
+    url: "https://08-zustand-psi-sable.vercel.app/",
     siteName: "NoteHub",
     images: [
       {
@@ -37,14 +37,11 @@ export const metadata: Metadata = {
   },
 };
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin", "cyrillic"],
+  display: "swap",
+  variable: "--font-roboto",
 });
 
 export default function RootLayout({
@@ -56,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${roboto.variable}`}>
         <TanStackProvider>
           <Header />
           {children}

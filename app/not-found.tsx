@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "404 - Сторінку не знайдено",
     description: "На жаль, ми не змогли знайти те, що ви шукаєте.",
-    url: "https://your-app-url.vercel.app",
+    url: "https://08-zustand-psi-sable.vercel.app/",
     images: [
       {
         url: "https://ac.goit.global",
