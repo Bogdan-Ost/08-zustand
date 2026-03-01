@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "NoteHub — Твій розумний записник",
     description:
       "Зберігайте свої ідеї безпечно та доступно з будь-якого пристрою.",
-    url: "https://08-zustand-psi-sable.vercel.app/",
+    url: "https://08-zustand-git-main-bogdan-osts-projects.vercel.app/",
     siteName: "NoteHub",
     images: [
       {
