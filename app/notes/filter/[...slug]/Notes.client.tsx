@@ -8,8 +8,8 @@ import { fetchNotes } from "@/lib/api";
 import SearchBox from "@/components/SearchBox/SearchBox";
 import { Pagination } from "@/components/Pagination/Pagination";
 import NoteList from "@/components/NoteList/NoteList";
-import Modal from "@/components/Modal/Modal";
 import NoteForm from "@/components/NoteForm/NoteForm";
+import Link from "next/link";
 
 interface NotesClientProps {
   tag: string;
@@ -53,18 +53,13 @@ export default function Notes({ tag }: NotesClientProps) {
           />
         )}
         {
-          <button className={css.button} onClick={toggleModal}>
+          <Link href="/notes/action/create" className={css.createButton}>
             Create note +
-          </button>
+          </Link>
         }
       </header>
       {!isLoading && data?.notes && data.notes.length > 0 && (
         <NoteList notes={data.notes} />
-      )}
-      {isModalOpen && (
-        <Modal onClose={toggleModal}>
-          <NoteForm onClose={toggleModal} />
-        </Modal>
       )}
     </div>
   );
