@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title = `Фільтр: ${filterValue} | NoteHub`;
   const description = `Перегляд нотаток за фільтром: ${filterValue}. Знаходьте ваші записи швидко та зручно.`;
-  const url = `https://your-app-url.vercel.app{slug.join("/")}`;
+  const url = `https://08-zustand-git-main-bogdan-osts-projects.vercel.app/notes/filter/${slug.join("/")}`;
 
   return {
     title,
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "NoteHub",
       images: [
         {
-          url: "https://08-zustand-psi-sable.vercel.app/",
+          url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
           width: 1200,
           height: 630,
           alt: `NoteHub Filter: ${filterValue}`,
